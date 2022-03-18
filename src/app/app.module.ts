@@ -5,15 +5,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 
 import { AppComponent } from './app.component';
-import { PaymentDetailsComponent } from './payment-details/payment-details.component';
-import { PaymentDetailFormComponent } from './payment-details/payment-detail-form/payment-detail-form.component';
+import { LoanDetailsComponent } from './loan-details/loan-details.component';
+import { LoanDetailFormComponent } from './loan-details/loan-detail-form/loan-detail-form.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PaymentDetailsComponent,
-    PaymentDetailFormComponent
+    LoanDetailsComponent,
+    LoanDetailFormComponent
   ],
   imports: [
     BrowserModule,
