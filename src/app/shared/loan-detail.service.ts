@@ -18,7 +18,8 @@ export class LoanDetailService {
   }
 
   putLoanDetail() {
-    return this.http.put(`${this.baseURL}/studentId/${this.formData.studentId}/institutionId/${this.formData.institutionId}`, this.formData);
+    var headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
+    return this.http.put(`${this.baseURL}/studentId/${this.formData.studentId}/institutionId/${this.formData.institutionId}`, this.formData, {headers});
   }
 
   refreshList() {
