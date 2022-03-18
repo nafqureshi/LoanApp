@@ -16,7 +16,7 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label>Institution Name</label>
-            <input type="password" class="form-control form-control-lg" placeholder="Institution Name" name="institutionName"
+            <input class="form-control form-control-lg" placeholder="Institution Name" name="institutionName"
                 #institutionName="ngModel" [(ngModel)]="service.formData.institutionName"
                 required [class.invalid]="institutionName.invalid && institutionName.touched">
         </div>
