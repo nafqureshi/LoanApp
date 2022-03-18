@@ -9,7 +9,7 @@ export class LoanDetailService {
 
   constructor(private http: HttpClient) { }
 
-  readonly baseURL = 'https://loanapiabdun.azurewebsites.net/api/Loan'//'http://localhost:61236/api/PaymentDetail'
+  readonly baseURL = 'https://loanapiabdun.azurewebsites.net/api/Loan'//'http://localhost:61236/api/LoanDetail'
   formData: LoanDetail = new LoanDetail();
   list: LoanDetail[];
 
