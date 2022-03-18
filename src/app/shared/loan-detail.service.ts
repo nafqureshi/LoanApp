@@ -18,7 +18,7 @@ export class LoanDetailService {
   }
 
   putLoanDetail() {
-    return this.http.put(`${this.baseURL}/studentId/${this.formData.studentId}/institutionId/${this.formData.institutionId}`, this.formData);
+    return this.http.post(`${this.baseURL}/studentId/${this.formData.studentId}/institutionId/${this.formData.institutionId}`, this.formData);
   }
 
   refreshList() {
