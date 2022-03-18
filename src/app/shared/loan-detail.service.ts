@@ -18,8 +18,21 @@ export class LoanDetailService {
   }
 
   putLoanDetail() {
-    var headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
-    return this.http.put(`${this.baseURL}/studentId/${this.formData.studentId}/institutionId/${this.formData.institutionId}`, this.formData, {headers});
+    fetch(`${this.baseURL}/studentId/${this.formData.studentId}/institutionId/${this.formData.institutionId}`, {
+          method: "PUT",
+          body: JSON.stringify(this.formData),
+          headers: {
+            "content-type": "application/json",
+          },
+        }).then((res) => {
+          res.json().then((data) => {
+            if(data)
+              return data;
+          });
+        });
+
+    //var headers = { 'Content-Type': 'application/x-www-form-urlencoded' };
+    //return this.http.put(`${this.baseURL}/studentId/${this.formData.studentId}/institutionId/${this.formData.institutionId}`, this.formData, {headers});
   }
 
   refreshList() {
